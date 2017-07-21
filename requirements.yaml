@@ -1,0 +1,10 @@
+dependencies:
+  - name: standard-service
+    version: 0.1.0
+    condition: standard-service.enabled
+    repository: file://./standard-service
+  - name: base-service
+    alias: standard-service42
+    version: 0.1.0
+    condition: standard-service42.enabled
+    repository: file://./base-service

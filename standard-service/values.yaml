@@ -1,0 +1,2 @@
+standard-service:
+  env: example

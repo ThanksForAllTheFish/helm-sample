@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-{{ lower .Chart.Name }}
+  namespace: {{ .Release.Namespace }}
+spec:
+  rules:
+  - host: {{ lower .Chart.Name }}-{{ .Values.env | default .Release.Namespace }}.{{- .Values.global.domain }}
+    http:
+      paths:
+      - backend:
+          serviceName: {{ lower .Chart.Name }}
+          servicePort: 80
+        path: /
+      - backend:
+          serviceName: {{ lower .Chart.Name }}
+          servicePort: 443
+        path: /

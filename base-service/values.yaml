@@ -1,0 +1,5 @@
+# TODO: default to dev environment
+global:
+  domain: dev.com
+
+enabled: false

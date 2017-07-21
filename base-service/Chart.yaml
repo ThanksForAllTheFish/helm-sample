@@ -1,0 +1,4 @@
+apiVersion: v1
+description: Base chart to depend on
+name: base-service
+version: 0.1.0
